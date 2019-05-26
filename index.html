@@ -7,6 +7,14 @@
 		<title>Fetch API Sandbox</title>
 	</head>
 	<body>
-		<button id="get Text">Get Text</button>
+		<button id="getText">Get Text</button>
+
+		<script>
+			var getText = () => {
+				fetch('sample.txt').then(res => console.log(res))
+			}
+
+			document.getElementById('getText').addEventListener('click', getText)
+		</script>
 	</body>
 </html>
